@@ -5,7 +5,7 @@ const renderCurrentDate = () => {
 }
 
 // function to add textarea data to local storage
-const renderCalenderEvents = () => {
+const renderTextArea = () => {
         //get from local storage
     const plannerEvents = JSON.parse(localStorage.getItem("plannerEvents"))
         // check if data is not null (false, do nothing)
@@ -20,7 +20,7 @@ if(plannerEvents !== null) {
         const callback = function () {
         //get time value from the row
         const textArea =  $(this).find("textarea")
-        const timeBlockTime = Number.parseInt($(this).data("time"), 10) 
+        const timeBlockTime = parseInt($(this).data("time"), 10) 
         // check value time in time block against current hour
     if (timeBlockTime === currentHour) {
             // get child from container "this"
@@ -40,9 +40,27 @@ if(plannerEvents !== null) {
     }
 }
 
+const onClick = function (event) {
+    const plannerEvents = JSON.parse(localStorage.getItem("plannerEvents"))
+    const target = $(event.target)
+    if (target.is("button")) {
+        const key = target.attr("id")
+        const value = target.parent().find("textarea").val()
+
+        const newObject = {
+            ...plannerEvents,
+            [key]: value
+        }
+    // add empty array to local storage
+        localStorage.setItem("plannerEvents", JSON.stringify(newObject))
+    }
+}
+
 const onReady = () => {
+    //set event listener on container
+    $(".container").click(onClick) 
     renderCurrentDate()
-    renderCalenderEvents()
+    renderTextArea()
 }
 //add function to display when window is loading
 $(document).ready(onReady)
