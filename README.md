@@ -2,37 +2,26 @@
 
 ## Description
 
+  This week's homework is to create a calendar application that allows users to save events for each hour of the day. The webpage will feature dynamically updated HTML and CSS powered by **JQuery**.  As a user with busy schedule, I want to add important events to the daily planner so I can manage my time effectively.
+
 ## Link to deployed URL 
-[ ]
+[https://marcuslau0903.github.io/Week5-Third-Party-APIs-Work-Day-Scheduler/]
 
+### languages used to create Calendar application
+HTML / CSS / JavaScript
+## Third party API's 
+BootStrap / Moment.js / FontAwesome / JQUERY 
 
+## Acceptance Criteria
 
-TASK: 
-Calendar application 
-HTML / CSS / JQUERY
+-[x] The current data is displayed at the top of the calender.
 
-using third party API
-https://momentjs.com/
+-[x] Timeblocks for standard business hours of that day are presented on the page. 
 
-requirement:
-1. current day should be displayed at top of calendar
-    "day,date,month"
+-[x] Each timeblock is color coded to indicate whether it is **past(grey)**, **present(present)** or **future(green)**.
 
-2. standard business hours - 9am - 5pm
-   
-3. Color coded time blocks for each hour of the day
-    1. Past hour = Grey background
-    2. Current hour = Red background
-    3. Future hour = green background
-   
-4. each time block should be a text area 
-   
-5. save button at the side of time block
-    1. when click save button, saves the current text input/ data into local storage
+-[x] User can click into the timeblock text area and enter an event. 
 
-6. if refresh the page, everything should be loaded from localStorage.
+-[x] When the user click's the save button for that timeblock, the text for that event is saved in local storage. 
 
-7. any date/time interactions must use moment.
-    1. Current day displayed at the top
-    2. Determine the current hour/
-
+-[x] The saved event will persist on the page even when refreshing the page.
