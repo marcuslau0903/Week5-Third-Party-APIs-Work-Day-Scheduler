@@ -14,14 +14,14 @@ BootStrap / Moment.js / FontAwesome / JQUERY
 
 ## Acceptance Criteria
 
--[x] The current data is displayed at the top of the calender.
+- [x] The current data is displayed at the top of the calender.
 
--[x] Timeblocks for standard business hours of that day are presented on the page. 
+- [x] Timeblocks for standard business hours of that day are presented on the page. 
 
--[x] Each timeblock is color coded to indicate whether it is **past(grey)**, **present(present)** or **future(green)**.
+- [x] Each timeblock is color coded to indicate whether it is **past(grey)**, **present(present)** or **future(green)**.
 
--[x] User can click into the timeblock text area and enter an event. 
+- [x] User can click into the timeblock text area and enter an event. 
 
--[x] When the user click's the save button for that timeblock, the text for that event is saved in local storage. 
+- [x] When the user click's the save button for that timeblock, the text for that event is saved in local storage. 
 
--[x] The saved event will persist on the page even when refreshing the page.
+- [x] The saved event will persist on the page even when refreshing the page.
